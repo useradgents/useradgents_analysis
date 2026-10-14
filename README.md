@@ -14,20 +14,13 @@ To use this package, add `useradgents_analysis` as a dev dependency in your `pub
 
 ```yaml
 dev_dependencies:
-  useradgents_analysis:
-    git:
-      url: https://github.com/useradgents/useradgents_analysis.git
-      ref: main
+  useradgents_analysis: ^1.1.0
 ```
 
-You can also pin to a specific version using a semver tag (e.g. `1.0.0`):
+Or with the command line:
 
-```yaml
-dev_dependencies:
-  useradgents_analysis:
-    git:
-      url: https://github.com/useradgents/useradgents_analysis.git
-      ref: 1.0.0
+```sh
+flutter pub add --dev useradgents_analysis
 ```
 
 Then, add the following to your `analysis_options.yaml`:
@@ -41,10 +34,7 @@ You can also add a `flutter_lints` dev dependency so your IDE can resolve the tr
 ```yaml
 dev_dependencies:
   flutter_lints: any
-  useradgents_analysis:
-    git:
-      url: https://github.com/useradgents/useradgents_analysis.git
-      ref: main
+  useradgents_analysis: ^1.1.0
 ```
 
 ---

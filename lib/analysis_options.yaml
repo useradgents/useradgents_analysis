@@ -212,12 +212,50 @@ dcm:
     - "widgetbook/**"
 
   rules:
+    # Disabled rules
+    - avoid-cubits: false
+    - avoid-empty-setstate: false
+    - avoid-enum-values-by-index: false
+    - avoid-inferrable-type-arguments: false
+    - avoid-missing-image-alt: false
+    - avoid-missing-tr-on-strings: false
+    - avoid-nullable-interpolation: false
+    - check-is-not-closed-after-async-gap: false
+    - extend-equatable: false
+    - handle-bloc-event-subclasses: false
+    - no-empty-block: false
+    - prefer-nullable-provider-types: false
+    - prefer-returning-shorthands: false
+
+    # Reclassified as style (conventions, not bugs)
+    - avoid-unnecessary-collections:
+        severity: style
+    - avoid-unnecessary-futures:
+        severity: style
+    - avoid-unnecessary-local-late:
+        severity: style
+    - avoid-unnecessary-nullable-return-type:
+        severity: style
+    - avoid-unnecessary-overrides-in-state:
+        severity: style
+    - match-getter-setter-field-names:
+        severity: style
+    - move-variable-closer-to-its-usage:
+        severity: style
+    - prefer-dedicated-media-query-methods:
+        severity: style
+    - prefer-declaring-const-constructor:
+        severity: style
+    - prefer-parentheses-with-if-null:
+        severity: style
+
     # General Code Quality Rules
     - avoid-assignments-as-conditions
     - avoid-cascade-after-if-null
     - avoid-casting-to-extension-type
     - avoid-collection-methods-with-unrelated-types
-    - avoid-commented-out-code
+    - avoid-commented-out-code:
+        severity: style
     - avoid-conditions-with-boolean-literals
     - avoid-double-slash-imports
     - avoid-duplicate-exports
@@ -233,7 +271,8 @@ dcm:
     - avoid-nullable-tostring
     - avoid-passing-async-when-sync-expected
     - avoid-passing-self-as-argument
-    - avoid-redundant-async
+    - avoid-redundant-async:
+        severity: style
     - avoid-self-assignment
     - avoid-self-compare
     - avoid-throw-in-catch-block
@@ -241,20 +280,22 @@ dcm:
     - avoid-unnecessary-type-assertions
     - avoid-unnecessary-type-casts
     - avoid-unrelated-type-assertions
-    - avoid-unused-parameters
-    - no-empty-block
+    - avoid-unused-parameters:
+        severity: style
     - no-equal-then-else
     - prefer-correct-test-file-name
-    - prefer-iterable-of
-    - prefer-match-file-name
+    - prefer-iterable-of:
+        severity: style
+    - prefer-match-file-name:
+        severity: style
 
     # Flutter-Specific Rules
     - always-remove-listener
     - avoid-incomplete-copy-with
     - avoid-incorrect-image-opacity
-    - avoid-missing-image-alt
     - avoid-unnecessary-setstate
-    - avoid-unnecessary-stateful-widgets
+    - avoid-unnecessary-stateful-widgets:
+        severity: style
     - check-for-equals-in-render-object-setters
     - consistent-update-render-object
     - prefer-single-widget-per-file
@@ -266,37 +307,37 @@ dcm:
     - dispose-providers
     - prefer-immutable-selector-value
     - prefer-multi-provider
-    - prefer-nullable-provider-types
     - prefer-provider-extensions
     # Bloc Rules
-    - avoid-bloc-public-fields
+    - avoid-bloc-public-fields:
+        severity: style
     - avoid-bloc-public-methods
-    - avoid-cubits
     - avoid-duplicate-bloc-event-handlers
-    - avoid-empty-build-when
+    - avoid-empty-build-when:
+        severity: style
     - avoid-existing-instances-in-bloc-provider
     - avoid-instantiating-in-bloc-value-provider
     - avoid-passing-bloc-to-bloc
     - avoid-passing-build-context-to-blocs
     - avoid-returning-value-from-cubit-methods
-    - check-is-not-closed-after-async-gap
     - emit-new-bloc-state-instances
-    - handle-bloc-event-subclasses
     - prefer-bloc-event-suffix
     - prefer-bloc-extensions
     - prefer-bloc-state-suffix
     - prefer-correct-bloc-provider
-    - prefer-immutable-bloc-events
-    - prefer-immutable-bloc-state
+    - prefer-immutable-bloc-events:
+        severity: style
+    - prefer-immutable-bloc-state:
+        severity: style
     - prefer-multi-bloc-provider
-    - prefer-sealed-bloc-events
-    - prefer-sealed-bloc-state
+    - prefer-sealed-bloc-events:
+        severity: style
+    - prefer-sealed-bloc-state:
+        severity: style
     # Equatable Rules
-    - extend-equatable:
-        class-name-pattern: Entity$
-        file-name-pattern: '_entity.dart'
     - list-all-equatable-fields
-    - prefer-equatable-mixin
+    - prefer-equatable-mixin:
+        severity: style
     # Get It Rules
     - avoid-functions-in-register-singleton
     # Firebase Analytics Rules
@@ -319,5 +360,4 @@ dcm:
     - prefer-semver-version
     - pubspec-ordering
     # Easy Location Rules
-    - avoid-missing-tr-on-strings
     - avoid-missing-tr
