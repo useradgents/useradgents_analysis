@@ -14,7 +14,7 @@ To use this package, add `useradgents_analysis` as a dev dependency in your `pub
 
 ```yaml
 dev_dependencies:
-  useradgents_analysis: ^1.1.0
+  useradgents_analysis: ^1.2.0
 ```
 
 Or with the command line:
@@ -34,7 +34,7 @@ You can also add a `flutter_lints` dev dependency so your IDE can resolve the tr
 ```yaml
 dev_dependencies:
   flutter_lints: any
-  useradgents_analysis: ^1.1.0
+  useradgents_analysis: ^1.2.0
 ```
 
 ---
