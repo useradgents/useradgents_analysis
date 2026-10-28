@@ -225,9 +225,15 @@ dcm:
     - handle-bloc-event-subclasses: false
     - no-empty-block: false
     - prefer-nullable-provider-types: false
+    - prefer-parentheses-with-if-null: false
+    - prefer-prefixed-global-constants: false
     - prefer-returning-shorthands: false
+    - prefer-single-widget-per-file: false
+    - prefer-spacing: false
 
     # Reclassified as style (conventions, not bugs)
+    - avoid-duplicate-initializers:
+        severity: style
     - avoid-unnecessary-collections:
         severity: style
     - avoid-unnecessary-futures:
@@ -242,12 +248,12 @@ dcm:
         severity: style
     - move-variable-closer-to-its-usage:
         severity: style
+
+    # Kept as warning (performance, recommended by the Flutter documentation)
     - prefer-dedicated-media-query-methods:
-        severity: style
+        severity: warning
     - prefer-declaring-const-constructor:
-        severity: style
-    - prefer-parentheses-with-if-null:
-        severity: style
+        severity: warning
 
     # General Code Quality Rules
     - avoid-assignments-as-conditions
@@ -298,7 +304,6 @@ dcm:
         severity: style
     - check-for-equals-in-render-object-setters
     - consistent-update-render-object
-    - prefer-single-widget-per-file
     - use-setstate-synchronously
     # Provider Rules
     - avoid-instantiating-in-value-provider

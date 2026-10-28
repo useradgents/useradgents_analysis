@@ -1,5 +1,18 @@
 # Changelog
 
+## 1.2.0
+
+- Add `sonar_report`: runs DCM and writes `dcm-quality-report.json` for SonarQube (`sonar.externalIssuesReportPaths`) with the DCM severity of each rule (`style` → MINOR, `warning`/`perf` → MAJOR, `error` → CRITICAL). The DCM `sonar` reporter sets MAJOR on every rule:
+  ```sh
+  dart run useradgents_analysis:sonar_report --ci-key=$DCM_CI_KEY --email=$DCM_EMAIL lib
+  ```
+- Disable DCM rules:
+  - `prefer-prefixed-global-constants` (contrary to Effective Dart: no prefix letters)
+  - `prefer-single-widget-per-file` (Flutter keeps small private widgets in the same file)
+  - `prefer-spacing`, `prefer-parentheses-with-if-null` (formatting only)
+- Upgrade DCM rules from `style` to `warning` (performance, recommended by the Flutter documentation): `prefer-dedicated-media-query-methods`, `prefer-declaring-const-constructor`
+- Downgrade DCM rule from `warning` to `style`: `avoid-duplicate-initializers`
+
 ## 1.1.0
 
 - Disable DCM rules:
