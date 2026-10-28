@@ -78,6 +78,16 @@ dcm activate --email=<your-email> --license-key=<your-key>
 
 > Since DCM needs an API key to start, you can skip this part if you do not use DCM in your project. The standard Flutter lints will still apply.
 
+### SonarQube
+
+The DCM `sonar` reporter sets MAJOR on every rule. To keep the DCM severity of each rule in SonarQube, generate the report with:
+
+```sh
+dart run useradgents_analysis:sonar_report --ci-key=$DCM_CI_KEY --email=$DCM_EMAIL lib
+```
+
+It writes `dcm-quality-report.json`, to import with `sonar.externalIssuesReportPaths=dcm-quality-report.json`.
+
 ---
 
 ## Versioning

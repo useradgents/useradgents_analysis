@@ -1,6 +1,6 @@
 name: useradgents_analysis
 description: Lint and DCM rules for Dart and Flutter used internally at UserAdgents.
-version: 1.1.0
+version: 1.2.0
 repository: https://github.com/useradgents/useradgents_analysis.git
 
 environment:
